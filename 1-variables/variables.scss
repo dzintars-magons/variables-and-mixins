@@ -1,0 +1,72 @@
+@use 'sass:map';
+@use '~/assets/sass/2-mixins/px-to-rem-convert' as *;
+
+//bootstrap grid breakpoints for media queries' mixins
+
+$sm-start: 576px; 
+$md-start: 768px;
+$lg-start: 992px;
+$xl-start: 1200px;
+
+$lg-end: $xl-start - 1px;
+$md-end: $lg-start - 1px;
+$sm-end: $md-start - 1px;
+$mobile-end: $sm-start - 1px;
+
+/*
+    =========
+    Typography
+    =========
+*/
+
+
+//background colors
+$primary-bg: #fff; 
+$secondary-bg: #66B933;
+$tertiary-bg: #000;
+
+$font-family: 'Roboto', sans-serif;
+$font-family-heading: 'Playfair Display SC', serif;
+
+//font weight variables
+$thin: 300;
+$regular:   400;
+$medium:    500;
+$semi-bold: 600;
+$bold:      700;
+
+$primary-line-height: 1.5;
+$small-line-height: 1;
+
+//font colors
+$primary-font-color: #010100;
+$secondary-font-color: #fff;
+
+$bg-gradient-from: #222228;
+$bg-gradient-to: #33333C;
+
+//Buttons
+
+$button-color: rgba(0,0,0,0);
+$button-font-size: rem(18);
+$button-padding: 0.5em 1.5em;
+$button-margin: 0;
+
+//Spacing 
+
+$header-padding: 30px;
+$section-padded: 3rem;
+$margin-bottom-primary: 1.6rem; //used in base as default for paragraphs and all headings
+$margin-bottom-secondary: 1.2rem;
+$margin-bottom-tertiary: 1rem;
+
+$padding-top-primary: $margin-bottom-primary;
+$padding-top-secondary: $margin-bottom-secondary;
+$padding-top-tertiary: $margin-bottom-tertiary;
+
+//Extra
+$popup-box-shadow: 2px 0px 25px rgba(#9A9EA6, .6);
+$aspect-ratio-box-height: 315px;
+$aspect-ratio-box-width: 560px;
+$aspect-ratio-box-text: 5vw;
+

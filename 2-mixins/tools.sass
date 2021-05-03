@@ -1,0 +1,145 @@
+/*
+    ==============
+    SIZING
+    ==============
+                    */
+
+@mixin mw ($size)
+    max-width: $size
+
+@mixin w ($size)
+    width: $size
+
+@mixin h ($size)
+    height: $size
+
+/*
+    ============
+    MARGINS AND PADDING
+    ============
+                    */
+
+@mixin m ($y, $x)
+    margin: $y $x
+
+@mixin mx ($size) 
+    margin-right: $size
+    margin-left: $size
+
+@mixin my ($size)
+    margin-top: $size
+    margin-bottom: $size
+
+@mixin mb-primary 
+    margin-bottom: $margin-bottom-primary
+
+@mixin mb-secondary
+    margin-bottom: $margin-bottom-secondary
+
+@mixin mr($size)
+    margin-right: $size
+
+@mixin ml($size)
+    margin-left: $size
+
+@mixin mt($size)
+    margin-top: $size
+
+@mixin mb($size)
+    margin-bottom: $size
+
+@mixin p ($y,$x)
+    padding: $y $x
+       
+@mixin px($size)
+    padding-right: $size
+    padding-left: $size
+
+@mixin py($size)
+    padding-top: $size
+    padding-bottom: $size
+
+@mixin pt-primary
+    padding-top: $padding-top-primary
+
+@mixin pt-secondary
+    padding-top: $padding-top-secondary
+
+@mixin pt-tertiary
+    padding-top: $padding-top-tertiary
+
+@mixin section-padded
+    padding-top: $section-padded
+    padding-bottom: $section-padded
+
+@mixin pr($size)
+    padding-right: $size
+
+@mixin pl($size)
+    padding-left: $size
+
+@mixin pt($size)
+    padding-top: $size
+
+@mixin pb($size)
+    padding-bottom: $size
+
+//    =========
+//    ASPECT RATIO BOXES
+//    =========
+
+
+//Aspect Ratio Box v1  
+
+@mixin aspect-ratio-box
+    height: 0
+    padding-top: $aspect-ratio-box-height / $aspect-ratio-box-width * 100%
+
+//Aspect Ratio Box v2
+//putting content inside an aspect ratio box
+//Elements should be nested in this order. 
+
+@mixin aspect-ratio-box-container
+    height: 0
+    overflow: hidden
+    padding-top: $aspect-ratio-box-height / $aspect-ratio-box-width * 100%
+    background: $primary-bg
+    position: relative
+
+@mixin aspect-ratio-box-container-inner
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+@mixin aspect-ratio-box-container-inner-flex
+    height: 100%
+    @include flex-center
+
+@mixin aspect-ratio-box-text
+    font-size: $aspect-ratio-box-text
+
+/*
+    =============
+    OTHER MIXINS
+    =============
+                    */
+
+//only display content to screen readers
+@mixin visually-hidden
+    position: absolute !important
+    width: 1px !important
+    height: 1px !important
+    padding: 0 !important
+    margin: -1px !important
+    overflow: hidden !important
+    clip: rect(0, 0, 0, 0) !important
+    white-space: nowrap !important
+    border: 0 !important
+
+@mixin color($color)
+    color: $color
+
+@mixin bg($color)
+    background: $color

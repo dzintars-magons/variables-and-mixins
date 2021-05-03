@@ -1,0 +1,90 @@
+@use '~/assets/sass/1-variables/variables' as *
+
+//DESKTOP FIRST MEDIA QUERIES
+
+//till 1199px
+@mixin xl-down
+    @media (max-width: #{$lg-end})
+        @content
+//till 991px
+@mixin lg-down
+    @media (max-width: #{$md-end})
+        @content
+//till 767px
+@mixin md-down
+    @media (max-width: #{$sm-end})
+        @content
+//till 575px
+@mixin sm-down
+    @media (max-width: #{$mobile-end})
+        @content
+//till whatever you choose
+@mixin max-width ($size)
+    @media (max-width: $size)
+        @content
+//maybe you need a media query for height of the viewport
+@mixin max-height ($size)
+    @media (max-height: $size)
+        @content
+
+//MOBILE FIRST MEDIA QUERIES
+
+//phablet up 
+//576px and up 
+@mixin sm-up
+    @media (min-width: #{$sm-start})
+        @content
+
+//tablet up
+//768px and up 
+@mixin md-up
+    @media (min-width: #{$md-start})
+        @content
+
+//992px and up
+@mixin lg-up
+    @media (min-width: #{$lg-start})
+        @content
+
+//1200px and up
+
+@mixin xl-up
+    @media (min-width: #{$xl-start})
+        @content
+
+//from whatever size you choose
+
+@mixin min-width ($size)
+    @media (min-width: $size)
+        @content
+
+//MEDIA QUERIES WITHIN A SPECIFIC RANGE like MOBILE or TABLET range only
+
+//mobile only
+//till 576px only
+@mixin xs-only
+    @media (max-width: #{$mobile-end})
+        @content
+//phablet-phones' size only
+//577px - 768px
+@mixin sm-only
+    @media (min-width: #{$sm-start}) and (max-width: #{$sm-end})
+        @content
+//only tablet
+//from 768px till 991px
+@mixin md-only
+    @media (min-width: #{$md-start}) and (max-width: #{$md-end})
+        @content
+//only desktop
+//from 992px till 1199px
+@mixin lg-only
+    @media (min-width: #{$lg-start}) and (max-width: #{$lg-end})
+        @content
+//only large desktop
+@mixin xl-only
+    @media (min-width: #{$xl-start})
+        @content
+//only specific range of your choosing 
+@mixin range ($min, $max)
+    @media (min-width: $min) and (max-width: $max)
+        @content
