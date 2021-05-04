@@ -1,0 +1,42 @@
+@use '~/assets/sass/2-mixins' as *
+
+.large-font-size
+    font-family: 'Playfair Display SC', serif
+    font-size: rem(47px)
+    font-weight: 700
+    +xs-only
+        font-size: rem(33px)
+.medium-font-size
+    font-family: 'Roboto', sans-serif
+    font-size: rem(25px)
+    font-weight: 400
+.average-font-size
+    font-family: 'Roboto', sans-serif
+    font-size: rem(19px)
+    font-weight: 400
+.small-font-size
+    font-family: 'Roboto', sans-serif
+    font-size: rem(15px)
+
+.small-line-height
+    line-height: 1
+
+.semi-bold
+    font-weight: 700
+
+.font-weight-300
+    font-weight: 300 !important
+
+.font-weight-400
+    font-weight: 300 !important
+
+.highlight-text
+    font-size: 1.3rem
+
+.white-text
+    color: #fff
+
+.section-heading
+    margin-bottom: rem(56px)
+    +xs-only
+        +mb(rem(35px))
